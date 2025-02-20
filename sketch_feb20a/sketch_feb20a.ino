@@ -23,7 +23,11 @@ void setup() {
 }
 
 void loop() {
-    // Check for red button
+  checkButtons();
+}
+
+void checkButtons(){
+      // Check for red button
     if (digitalRead(buttonRed) == LOW) {
         digitalWrite(redPin, HIGH);
     } else {
@@ -41,5 +45,4 @@ void loop() {
     } else {
         digitalWrite(bluePin, LOW);
     }
-
 }
