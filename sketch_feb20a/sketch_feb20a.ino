@@ -10,12 +10,12 @@ const int bluePin = 11;
 
 
 void setup() {
-    // Set buttons as inputs
+    // Set buttons inputs
     pinMode(buttonRed, INPUT_PULLUP);
     pinMode(buttonGreen, INPUT_PULLUP);
     pinMode(buttonBlue, INPUT_PULLUP);
 
-    // Set LED pins as output
+    // Set LED pins output
     pinMode(redPin, OUTPUT);
     pinMode(greenPin, OUTPUT);
     pinMode(bluePin, OUTPUT);
@@ -23,6 +23,7 @@ void setup() {
 }
 
 void loop() {
+  // Check for button press and send power to LED
   checkButtons();
 }
 
@@ -33,7 +34,7 @@ void checkButtons(){
     } else {
         digitalWrite(redPin, LOW);
     }
-        // Check for green button
+      // Check for green button
     if (digitalRead(buttonGreen) == LOW) {
         digitalWrite(greenPin, HIGH);
     } else {
