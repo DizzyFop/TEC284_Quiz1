@@ -23,7 +23,23 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  digitalWrite(redPin, HIGH);
+    // Check for red button
+    if (digitalRead(buttonRed) == LOW) {
+        digitalWrite(redPin, HIGH);
+    } else {
+        digitalWrite(redPin, LOW);
+    }
+        // Check for green button
+    if (digitalRead(buttonGreen) == LOW) {
+        digitalWrite(greenPin, HIGH);
+    } else {
+        digitalWrite(greenPin, LOW);
+    }
+    // Check for blue button
+    if (digitalRead(buttonBlue) == LOW) {
+        digitalWrite(bluePin, HIGH);
+    } else {
+        digitalWrite(bluePin, LOW);
+    }
 
 }
